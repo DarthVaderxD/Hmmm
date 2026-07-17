@@ -127,75 +127,158 @@ class Calculator(QWidget):
 
     def button_1_clicked(self):
         yo = self.screen.text()
+        if yo != "" and yo[-1].isalpha():
+            self.screen.clear()
+            yo = ""
+        else:
+            pass
         yo += "1"
         self.screen.setText(yo)
     def button_2_clicked(self):
         yo = self.screen.text()
+        if yo != "" and yo[-1].isalpha():
+            self.screen.clear()
+            yo = ""
+        else:
+            pass
         yo += "2"
         self.screen.setText(yo)
     def button_3_clicked(self):
         yo = self.screen.text()
+        if yo != "" and yo[-1].isalpha():
+            self.screen.clear()
+            yo = ""
+        else:
+            pass
         yo += "3"
         self.screen.setText(yo)
     def button_4_clicked(self):
         yo = self.screen.text()
+        if yo != "" and yo[-1].isalpha():
+            self.screen.clear()
+            yo = ""
+        else:
+            pass
         yo += "4"
         self.screen.setText(yo)
     def button_5_clicked(self):
         yo = self.screen.text()
+        if yo != "" and yo[-1].isalpha():
+            self.screen.clear()
+            yo = ""
+        else:
+            pass
         yo += "5"
         self.screen.setText(yo)
     def button_6_clicked(self):
         yo = self.screen.text()
+        if yo != "" and yo[-1].isalpha():
+            self.screen.clear()
+            yo = ""
+        else:
+            pass
         yo += "6"
         self.screen.setText(yo)
     def button_7_clicked(self):
         yo = self.screen.text()
+        if yo != "" and yo[-1].isalpha():
+            self.screen.clear()
+            yo = ""
+        else:
+            pass
         yo += "7"
         self.screen.setText(yo)
     def button_8_clicked(self):
         yo = self.screen.text()
+        if yo != "" and yo[-1].isalpha():
+            self.screen.clear()
+            yo = ""
+        else:
+            pass
         yo += "8"
         self.screen.setText(yo)
     def button_9_clicked(self):
         yo = self.screen.text()
+        if yo != "" and yo[-1].isalpha():
+            self.screen.clear()
+            yo = ""
+        else:
+            pass
         yo += "9"
         self.screen.setText(yo)
     def button_0_clicked(self):
         yo = self.screen.text()
+        if yo != "" and yo[-1].isalpha():
+            self.screen.clear()
+            yo = ""
+        else:
+            pass
         yo += "0"
         self.screen.setText(yo)
     def button_add_clicked(self):
         yo = self.screen.text()
+        if yo != "" and yo[-1].isalpha():
+            self.screen.clear()
+            yo = ""
+        else:
+            pass
         yo += "+"
         self.screen.setText(yo)
     def button_subtract_clicked(self):
         yo = self.screen.text()
+        if yo != "" and yo[-1].isalpha():
+            self.screen.clear()
+            yo = ""
+        else:
+            pass
         yo += "-"
         self.screen.setText(yo)
     def button_multiply_clicked(self):
         yo = self.screen.text()
+        if yo != "" and yo[-1].isalpha():
+            self.screen.clear()
+            yo = ""
+        else:
+            pass
         yo += "*"
         self.screen.setText(yo)
     def button_divide_clicked(self):
         yo = self.screen.text()
+        if yo != "" and yo[-1].isalpha():
+            self.screen.clear()
+            yo = ""
+        else:
+            pass
         yo += "/"
         self.screen.setText(yo)
     def button_square_clicked(self):
         yo = self.screen.text()
+        if yo != "" and yo[-1].isalpha():
+            self.screen.clear()
+            yo = ""
+        else:
+            pass
         yo += "**2"
         self.screen.setText(yo)
     def button_decimal_clicked(self):
         yo = self.screen.text()
+        if yo != "" and yo[-1].isalpha():
+            self.screen.clear()
+            yo = ""
+        else:
+            pass
         yo += "."
         self.screen.setText(yo)
     def button_clear_clicked(self):
         self.screen.clear()
     def button_C_clicked(self):
         yo = self.screen.text()
-        x = len(yo)
-        yo = yo[0:x-1]
-        self.screen.setText(yo)
+        if yo != "" and yo[-1].isalpha():
+            self.screen.clear()
+        else:
+            x = len(yo)
+            yo = yo[0:x-1]
+            self.screen.setText(yo)
     def calculate(self):
         try:
             yo = self.screen.text()
@@ -204,6 +287,8 @@ class Calculator(QWidget):
             self.screen.setText(yo)
         except ZeroDivisionError:
             print("You can't divide by zero !")
+        except SyntaxError:
+            self.screen.setText("Syntax Error")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
